@@ -6792,8 +6792,13 @@ td.visible-print {
   display: none !important;
 }
 
+.map {
+    height: 400px;
+    width: 100%;
+}
+
 @media print {
-  .visible-print {
+    .visible-print {
     display: block !important;
   }
   tr.visible-print {
