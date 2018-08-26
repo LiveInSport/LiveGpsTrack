@@ -1,13 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GpsTrack.aspx.cs" Inherits="LiveGpsTrack.WebForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link rel="stylesheet" href="http://openlayers.org/en/v3.16.0/css/ol.css" type="text/css">
+        <link href="~/favicon.ico" rel="st" type="image/x-icon" />
+
+    <link rel="stylesheet" href="~/Content/ol.css" type="text/css">
     <script src="http://openlayers.org/en/v3.16.0/build/ol.js" type="text/javascript"></script>
     <input type="submit" name="Button" id="start_tracking" value="Start Tacking" />
     <label id="latit"></label>
     <label id="longit"></label>
     <label id="spd"></label>
-    <div id="map" class="map">
+    <div id="map" class="map" >
     </div>
 
     <script>//uses geolocation for locating and shoving the current location
