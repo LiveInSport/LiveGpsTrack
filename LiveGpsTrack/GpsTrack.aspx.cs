@@ -13,5 +13,9 @@ namespace LiveGpsTrack
         {
         }
 
+        protected void btnMap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
