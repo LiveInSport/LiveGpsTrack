@@ -1,17 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GpsTrack.aspx.cs" Inherits="LiveGpsTrack.WebForm1" %>
+﻿<%@ Page Title="Tracking" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GpsTrack.aspx.cs" Inherits="LiveGpsTrack.WebForm1" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <link href="~/favicon.ico" rel="st" type="image/x-icon" />
 
     <link rel="stylesheet" href="/Content/oltest.css" type="text/css">
-    <link rel="stylesheet" href="/Content/samplestest.css" type="text/css">
-    <link rel="stylesheet" href="/Content/styletest.css" type="text/css">
+<%--    <link rel="stylesheet" href="/Content/samplestest.css" type="text/css">
+    <link rel="stylesheet" href="/Content/styletest.css" type="text/css">--%>
     <link rel="stylesheet" href="/Content/font-awesome.css" type="text/css">
 <%--    <script src="http://openlayers.org/en/v3.16.0/build/ol.js" type="text/javascript"></script>--%>
     <script src="/Scripts/ol-debug.js" type="text/javascript"></script>
-        <div class="container body-content">
-        <input type="submit" name="Button" id="tracking" value="Start Tacking" onclick="return false;" />
-        <input type="submit" name="Button" id="BoI" value="Boint of Intrest" onclick="return false;" />
+        <div>
+        <input type="submit" name="Button" class="btn-large" id="tracking" value="Start Tacking" onclick="return false;" />
+        <input type="submit" name="Button" class="btn-large" id="BoI" value="Boint of Intrest" onclick="return false;" />
         <label id="latit"></label>
         <label id="longit"></label>
         <label id="spd"></label>
@@ -55,6 +55,7 @@
         });
         // set up the geolocation api to track our position
         var geolocation = new ol.Geolocation({
+           
             tracking: true
         });
         // bind the view's projection
@@ -63,8 +64,11 @@
         // geometry and recenter the view
         geolocation.on('change:position', function () {
             var coordinate = geolocation.getPosition();
+            var direction = geolocation.getHeading();
             view.setCenter(coordinate);
             document.getElementById('latit').innerText = coordinate;
+            document.getElementById('longit').innerText = 'Heading ' + direction + ' Altitude ' + geolocation.getAltitude();
+            document.getElementById('spd').innerText = 'Accuracy ' + geolocation.getAccuracy() + 'm Speed ' + geolocation.getSpeed();
             trackFeature.getGeometry().appendCoordinate(coordinate);
         });
         // put a marker at our current position
