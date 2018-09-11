@@ -3,11 +3,36 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
+        <a class="mySlides" href="https://www.w3schools.com">
+            <img border="0" src="/Img/1.jpg" style="width:100px">
+        </a>
+        <a class="mySlides" href="https://www.w3schools.c">
+            <img border="0" src="/Img/2.jpg" style="width:100px">
+        </a>
+        <a class="mySlides" href="https://www.w3schools.co">
+            <img border="0" src="/Img/3.jpg" style="width:100px">
+        </a>
         <h1>ASP.NET</h1>
         <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
     </div>
+    <script>
+        var myIndex = 0;
+        carousel();
 
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "inline";
+            document.getElementById("jumbotron").style.backgroundImage = "url('jpg/1.jpg')";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
     <div class="row">
         <div class="col-md-4">
             <h2>Getting started</h2>
