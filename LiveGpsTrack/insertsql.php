@@ -29,10 +29,7 @@
 /************************************CONFIG****************************************/
 //DATABSE DETAILS//
 $DB_ADDRESS="den1.mssql2.gear.host";
-$DB_USER="liv";
-$DB_PASS="LiveInSport!";
-$DB_NAME="liv";
-
+$connectionInfo=array("Database"=>"liv", "UID"=>"liv", "PWD"=>"LiveInSport!");
 //SETTINGS//
 //This code is something you set in the APP so random people cant use it.
 $SQLKEY="secret";
@@ -53,7 +50,7 @@ if( isset($_POST['query']) && isset($_POST['key']) ){                           
     if(get_magic_quotes_gpc()){     //check if the worthless pile of crap magic quotes is enabled and if it is, strip the slashes from the query
       $query=stripslashes($query);
     }
-    $conn = new mysqli($DB_ADDRESS,$DB_USER,$DB_PASS,$DB_NAME);    //connect
+    $conn = sqlsrv_connect( $serverName, $connectionInfo);    //connect
 
     if($conn->connect_error){                                                           //checks connection
       header("HTTP/1.0 400 Bad Request");
@@ -95,5 +92,8 @@ if( isset($_POST['query']) && isset($_POST['key']) ){                           
 } else {
         header("HTTP/1.0 400 Bad Request");
         echo "Bad Request";
+
 }
+die( print_r( sqlsrv_errors(), true)); 
+
 ?>
