@@ -28,7 +28,7 @@
 
 /************************************CONFIG****************************************/
 //DATABSE DETAILS//
-$DB_ADDRESS="den1.mssql2.gear.host";
+$serverName="den1.mssql2.gear.host";
 $connectionInfo=array("Database"=>"liv", "UID"=>"liv", "PWD"=>"LiveInSport!");
 //SETTINGS//
 //This code is something you set in the APP so random people cant use it.
