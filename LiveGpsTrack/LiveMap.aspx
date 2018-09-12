@@ -16,7 +16,7 @@
         <label id="longit"></label>
         <label id="spd"></label>
     </div>
-       <div id="map" class="full-map" style="border-radius='40'"></div>
+       <div id="map" class="full-map" style="border-radius:40px;"></div>
     <div id="location" class="marker"><span class="icon-arrow-up"></span></div>
 
 

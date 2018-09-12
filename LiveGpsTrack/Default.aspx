@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <a class="mySlides" href="https://www.w3schools.com">
+        <a class="mySlides" href="https://www.google.com">
             <img border="0" src="/Img/1.jpg" style="width:100px">
         </a>
         <a class="mySlides" href="https://www.w3schools.c">
@@ -29,7 +29,7 @@
             myIndex++;
             if (myIndex > x.length) { myIndex = 1 }
             x[myIndex - 1].style.display = "inline";
-            document.getElementById("jumbotron").style.backgroundImage = "url('jpg/1.jpg')";
+//            document.getElementById("jumbotron").style.backgroundImage = "url('jpg/1.jpg')";
             setTimeout(carousel, 2000); // Change image every 2 seconds
         }
     </script>
