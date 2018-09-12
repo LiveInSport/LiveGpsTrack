@@ -32,7 +32,7 @@ $serverName="den1.mssql2.gear.host";
 $connectionInfo=array("Database"=>"liv", "UID"=>"liv", "PWD"=>"LiveInSport!");
 //SETTINGS//
 //This code is something you set in the APP so random people cant use it.
-$SQLKEY="secret";
+//$SQLKEY="secret";
 
 /************************************CONFIG****************************************/
 
@@ -41,11 +41,11 @@ header('Cache-Control: no-cache, must-revalidate');
 
 error_log(print_r($_POST,TRUE));
 
-if( isset($_POST['query']) && isset($_POST['key']) ){                                   //checks if the tag post is there and if its been a proper form post
+if( isset($_POST['query'])){// && isset($_POST['key']) ){                                   //checks if the tag post is there and if its been a proper form post
   //set content type to CSV (to be set here to be able to access this page also with a browser)
   header('Content-type: text/csv');
 
-  if($_POST['key']==$SQLKEY){                                                           //validates the SQL key
+//  if($_POST['key']==$SQLKEY){                                                           //validates the SQL key
     $query=urldecode($_POST['query']);
     if(get_magic_quotes_gpc()){     //check if the worthless pile of crap magic quotes is enabled and if it is, strip the slashes from the query
       $query=stripslashes($query);
@@ -86,10 +86,10 @@ if( isset($_POST['query']) && isset($_POST['key']) ){                           
       }
       $conn->close();                                          //closes the DB
     }
-  } else {
-     header("HTTP/1.0 400 Bad Request");
-     echo "Bad Secret key Request";                                       //reports if the secret key was bad
-  }
+//  } else {
+//     header("HTTP/1.0 400 Bad Request");
+//     echo "Bad Secret key Request";                                       //reports if the secret key was bad
+//  }
 } else {
         header("HTTP/1.0 400 Bad Request");
         echo "Bad Request";
