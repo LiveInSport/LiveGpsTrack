@@ -4,25 +4,37 @@
     <link href="~/favicon.ico" rel="st" type="image/x-icon" />
 
     <link rel="stylesheet" href="/Content/oltest.css" type="text/css">
-<%--    <link rel="stylesheet" href="/Content/samplestest.css" type="text/css">
+    <%--    <link rel="stylesheet" href="/Content/samplestest.css" type="text/css">
     <link rel="stylesheet" href="/Content/styletest.css" type="text/css">--%>
     <link rel="stylesheet" href="/Content/font-awesome.css" type="text/css">
-<%--    <script src="http://openlayers.org/en/v3.16.0/build/ol.js" type="text/javascript"></script>--%>
+    <%--    <script src="http://openlayers.org/en/v3.16.0/build/ol.js" type="text/javascript"></script>--%>
     <script src="/Scripts/ol-debug.js" type="text/javascript"></script>
-        <div style="margin:20px">
-        <input type="submit" name="Button" class="btn btn-default" id="tracking" value="Start Tacking" onclick="return false;" />
+    <div style="margin: 20px">
+        <input type="submit" name="Button" class="btn btn-default" id="tracking" value="Start tracking" onclick="return false;" />
         <input type="submit" name="Button" class="btn btn-default" id="BoI" value="Boint of Intrest" onclick="return false;" />
         <label id="latit"></label>
         <label id="longit"></label>
         <label id="spd"></label>
     </div>
-    <div style="border-radius:40px;">
-       <div id="map" class="full-map" ></div>
-    <div id="location" class="marker"><span class="icon-arrow-up"></span></div>
-        </div>
+    <div style="border-radius: 40px;">
+        <div id="map" class="full-map"></div>
+        <div id="location" class="marker"><span class="icon-arrow-up"></span></div>
+    </div>
 
     <script>//uses geolocation for locating and shoving the current location
-        // create a style to display our position history (track)
+        var trakcingCheck = false;
+        var track = [];
+        document.getElementById("tracking").addEventListener("click", function () {
+            if (document.getElementById("tracking").value == "Start") {
+                trackingCheck = true;
+                document.getElementById("tracking").value = "Finish";
+            } else {
+                trackingCheck = false;
+                document.getElementById("tracking").value = "Start";
+                
+            }
+        });
+                // create a style to display our position history (track)
         var trackStyle = new ol.style.Style({
             stroke: new ol.style.Stroke({
                 color: 'rgba(0,0,255,1.0)',
@@ -56,7 +68,6 @@
         });
         // set up the geolocation api to track our position
         var geolocation = new ol.Geolocation({
-           
             tracking: true
         });
         // bind the view's projection
@@ -67,10 +78,13 @@
             var coordinate = geolocation.getPosition();
             var direction = geolocation.getHeading();
             view.setCenter(coordinate);
-            document.getElementById('latit').innerText = coordinate;
+            if (trakcingCheck) {
+                track.push(coordinate);
+                trackFeature.getGeometry().appendCoordinate(coordinate);
+            }
+            document.getElementById('latit').innerText = track;
             document.getElementById('longit').innerText = 'Heading ' + direction + ' Altitude ' + geolocation.getAltitude();
             document.getElementById('spd').innerText = 'Accuracy ' + geolocation.getAccuracy() + 'm Speed ' + geolocation.getSpeed();
-            trackFeature.getGeometry().appendCoordinate(coordinate);
         });
         // put a marker at our current position
         var marker = new ol.Overlay({

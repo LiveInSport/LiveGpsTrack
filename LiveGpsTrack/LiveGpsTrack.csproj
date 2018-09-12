@@ -148,6 +148,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="insertsql.php" />
     <Content Include="LiveMap.aspx" />
     <Content Include="GpsTrack.aspx" />
     <Content Include="Img\1.jpg" />
