@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Tracking" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GpsTrack.aspx.cs" Inherits="LiveGpsTrack.WebForm1" %>
+﻿<%@ Page Title="Live Map" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LiveMap.aspx.cs" Inherits="LiveMap.LiveMap" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <link href="~/favicon.ico" rel="st" type="image/x-icon" />
@@ -16,10 +16,9 @@
         <label id="longit"></label>
         <label id="spd"></label>
     </div>
-    <div style="border-radius:40px;">
-       <div id="map" class="full-map" ></div>
+       <div id="map" class="full-map" style="border-radius='40'"></div>
     <div id="location" class="marker"><span class="icon-arrow-up"></span></div>
-        </div>
+
 
     <script>//uses geolocation for locating and shoving the current location
         // create a style to display our position history (track)

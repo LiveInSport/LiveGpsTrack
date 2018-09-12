@@ -148,6 +148,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="LiveMap.aspx" />
     <Content Include="GpsTrack.aspx" />
     <Content Include="Img\1.jpg" />
     <Content Include="Img\2.jpg" />
@@ -220,6 +221,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LiveMap.aspx.cs">
+      <DependentUpon>LiveMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LiveMap.aspx.designer.cs">
+      <DependentUpon>LiveMap.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
