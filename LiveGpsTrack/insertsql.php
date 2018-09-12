@@ -52,7 +52,8 @@ if( isset($_POST['query']) && isset($_POST['key']) ){                           
     }
     $conn = sqlsrv_connect( $serverName, $connectionInfo);    //connect
 
-    if($conn->connect_error){                                                           //checks connection
+    if($conn){                                                           //checks connection
+	  echo "Connection establised"
       header("HTTP/1.0 400 Bad Request");
       echo "ERROR Database Connection Failed: " . $conn->connect_error, E_USER_ERROR;   //reports a DB connection failure
     } else {
@@ -87,7 +88,7 @@ if( isset($_POST['query']) && isset($_POST['key']) ){                           
     }
   } else {
      header("HTTP/1.0 400 Bad Request");
-     echo "Bad Request";                                       //reports if the secret key was bad
+     echo "Bad Secret key Request";                                       //reports if the secret key was bad
   }
 } else {
         header("HTTP/1.0 400 Bad Request");
