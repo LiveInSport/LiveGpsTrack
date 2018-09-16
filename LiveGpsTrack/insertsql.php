@@ -28,7 +28,7 @@
 
 /************************************CONFIG****************************************/
 //DATABSE DETAILS//
-$DB_ADDRESS="den1.mysql6.gear.host";
+$DB_ADDRESS="den1.mysql6.gear.host\3306";
 $DB_USER="mysqlliv";
 $DB_PASS="5eaPea3#";
 $DB_NAME="mysqlliv";
