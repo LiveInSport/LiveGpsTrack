@@ -1,4 +1,5 @@
-﻿<%@ Page Title="Live Map" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LiveMap.aspx.cs" Inherits="LiveMap.LiveMap" %>
+﻿
+<%@ Page Title="Live Map" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LiveMap.aspx.cs" Inherits="LiveMap.LiveMap" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <link href="~/favicon.ico" rel="st" type="image/x-icon" />
@@ -6,20 +7,10 @@
     <link rel="stylesheet" href="/Content/oltest.css" type="text/css">
     <link rel="stylesheet" href="/Content/font-awesome.css" type="text/css">
     <script src="/Scripts/ol-debug.js" type="text/javascript"></script>
-    <asp:SqlDataSource 
-        ID="SqlDataSource1" 
-        runat="server"
-        ConnectionString="<%$ ConnectionStrings:dbDrivers %>" 
-        SelectCommand="SELECT * FROM [driversLocation]">
-    </asp:SqlDataSource>
-    <div style="margin: 20px">
-        <input type="submit" name="Button" class="btn btn-default" id="tracking" value="Start Tacking" onclick="return false;" />
-        <input type="submit" name="Button" class="btn btn-default" id="BoI" value="Boint of Intrest" onclick="return false;" />
-        <label id="latit"></label>
-        <label id="longit"></label>
-        <label id="spd"></label>
-    </div>
     <div id="map" class="full-map" style="border-radius: 40px;"></div>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+    
     <div id="location" class="marker"><span class="icon-arrow-up"></span></div>
     <script>//uses geolocation for locating and shoving the current location
         var drivers = new Array(){
@@ -95,3 +86,4 @@
 
     </script>
 </asp:Content>
+
