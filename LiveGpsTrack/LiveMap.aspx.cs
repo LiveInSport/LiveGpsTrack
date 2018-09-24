@@ -18,7 +18,7 @@ namespace LiveMap
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            connect("SELECT * FROM events");// WHERE date > '23.09.2018 09:00:00'");            
+            connect("SELECT * FROM events ");// WHERE date > '23.09.2018 09:00:00'");            
         }
         public void connect(string a)
         {
@@ -30,8 +30,10 @@ namespace LiveMap
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                Label1.Text = reader["location"].ToString();
+                Label1.Text = Label1.Text + reader["location"].ToString();
+                reader.GetString(1);
             }
+            conn.Close();
 
         }
 

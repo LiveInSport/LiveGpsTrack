@@ -8,26 +8,27 @@
     <link rel="stylesheet" href="/Content/font-awesome.css" type="text/css">
     <script src="/Scripts/ol-debug.js" type="text/javascript"></script>
     <div id="map" class="full-map" style="border-radius: 40px;"></div>
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
     <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+    
+    <asp:ListBox ID="ListBox1" runat="server">
+        <asp:ListItem>zzxz</asp:ListItem>
+    </asp:ListBox>
     
     <div id="location" class="marker"><span class="icon-arrow-up"></span></div>
     <script>//uses geolocation for locating and shoving the current location
-        var drivers = new Array(){
-            data=""
-        }
         // create a style to display our position history (track)
-        var trackStyle = new ol.style.Style({
-            stroke: new ol.style.Stroke({
+        var trackStyle = new ol.style.Style(
+            stroke: new ol.style.Stroke(
                 color: 'rgba(0,0,255,1.0)',
                 width: 3,
                 lineCap: 'round'
-            })
-        });
+            )
+        );
         // use a single feature with a linestring geometry to display our track
-        var trackFeature = new ol.Feature({
+        var trackFeature = new ol.Feature(
             geometry: new ol.geom.LineString([])
-        });
+        );
         // we'll need a vector layer to render it
         var trackLayer = new ol.layer.Vector({
             source: new ol.source.Vector({
