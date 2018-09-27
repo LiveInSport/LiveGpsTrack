@@ -167,6 +167,10 @@
     <Content Include="Img\2.jpg" />
     <Content Include="Img\3.jpg" />
     <Content Include="libman.json" />
+    <Content Include="Login\LogIn.aspx" />
+    <Content Include="Login\CreateUser.aspx" />
+    <Content Include="Login\ChangePassword.aspx" />
+    <Content Include="Login\pwdChangeScf.aspx" />
     <None Include="Properties\PublishProfiles\liv - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\liv - FTP1.pubxml" />
     <None Include="Properties\PublishProfiles\liv - Web Deploy.pubxml" />
@@ -269,6 +273,34 @@
     </Compile>
     <Compile Include="GpsTrack.aspx.designer.cs">
       <DependentUpon>GpsTrack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\pwdChangeScf.aspx.cs">
+      <DependentUpon>pwdChangeScf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\pwdChangeScf.aspx.designer.cs">
+      <DependentUpon>pwdChangeScf.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
