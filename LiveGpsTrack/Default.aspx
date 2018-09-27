@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <div class="jumbotron">
+    <div class="jumbotron w3-display-container">
         <a class="mySlides" href="http://localhost:49882/GpsTrack">
             <img border="0" src="Img/1.jpg" style="width: 100%">
         </a>
@@ -15,10 +15,10 @@
         <button type="button" class="w3-button w3-display-left" onclick="plusDivs(-1);">&#10094;</button>
         <button type="button" class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
 
-        <h1>LiveINsport</h1>
-        <p class="lead">
+        <h1 class="w3-display-topmiddle">LiveINsport</h1>
+        <p class="lead w3-display-middle">
             more SPORT
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg w3-display-bottomleft">Learn more &raquo;</a></p>
     </div>
     <script>
             var time = true;
