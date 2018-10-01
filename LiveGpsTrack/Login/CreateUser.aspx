@@ -5,5 +5,6 @@
             <asp:CreateUserWizardStep runat="server" />
             <asp:CompleteWizardStep runat="server" />
         </WizardSteps>
-    </asp:CreateUserWizard>
+    </asp:CreateUserWizard>mysqlliv.den1.mysql6.gear.host
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
 </asp:Content>

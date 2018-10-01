@@ -52,16 +52,14 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/GpsTrack">GPS Track</a></li>
+                        <li><a runat="server" href="~/PrivatePages/GpsTrack">GPS Track</a></li>
                         <li><a runat="server" href="~/LiveMap">Live Map</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-  <li><asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/" /></li>
-                        <li><a runat="server" href="~/Login/CreateUser">Register</a></li>
+                        <li><asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/" /></li>
                     </ul>
-
                 </div>
             </div>
         </div>

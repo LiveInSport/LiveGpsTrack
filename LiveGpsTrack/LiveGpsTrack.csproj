@@ -34,6 +34,13 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="NewConnection1-Deployment" Order="1">
+          <Destination Path="" />
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +50,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="NewConnection1-Deployment" Order="1">
+          <Destination Path="" />
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
@@ -191,7 +205,7 @@
     </Content>
     <Content Include="insertsql.php" />
     <Content Include="LiveMap.aspx" />
-    <Content Include="GpsTrack.aspx" />
+    <Content Include="PrivatePages\GpsTrack.aspx" />
     <Content Include="Img\1.jpg" />
     <Content Include="Img\2.jpg" />
     <Content Include="Img\3.jpg" />
@@ -296,11 +310,11 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="GpsTrack.aspx.cs">
+    <Compile Include="PrivatePages\GpsTrack.aspx.cs">
       <DependentUpon>GpsTrack.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GpsTrack.aspx.designer.cs">
+    <Compile Include="PrivatePages\GpsTrack.aspx.designer.cs">
       <DependentUpon>GpsTrack.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\LogIn.aspx.cs">
