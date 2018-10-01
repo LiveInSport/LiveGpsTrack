@@ -203,6 +203,7 @@
     <Content Include="Content\samplestest.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\styletest.css" />
+    <Content Include="Content\w3.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
