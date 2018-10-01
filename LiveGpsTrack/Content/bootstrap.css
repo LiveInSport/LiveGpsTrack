@@ -4944,7 +4944,7 @@ a.list-group-item.active > .badge,
 }
 
 .jumbotron img{
-    border-radius: 20px;
+    border-radius: 3px;
 }
 .jumbotron h1 {
   line-height: 1;
