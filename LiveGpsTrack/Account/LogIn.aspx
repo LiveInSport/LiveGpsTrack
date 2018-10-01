@@ -14,7 +14,7 @@
     }
 </script>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Login/CreateUser.aspx" runat="server">Register User</asp:HyperLink>
+    <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Account/CreateUser.aspx" runat="server">Register User</asp:HyperLink>
     <asp:Login ID="Login1" runat="server" OnAuthenticate="OnAutenticate">
     </asp:Login>
 </asp:Content>
