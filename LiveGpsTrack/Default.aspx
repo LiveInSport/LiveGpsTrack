@@ -12,8 +12,8 @@
         <a class="mySlides" href="https://www.w3schools.co">
             <img border="0" src="/Img/3.jpg" style="width: 100%">
         </a>
-        <button type="button" class="w3-button w3-display-left" onclick="plusDivs(-1);">&#10094;</button>
-        <button type="button" class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+        <button type="button" style="border:0px; background:rgba(0,0,0,0); height:100%; width:10%; padding:0px" class="jumbotron-btn-left <%--w3-button w3-display-left--%>" onclick="plusDivs(-1);">&#10094;</button>
+        <button type="button" style="border:0px; background:rgba(0,0,0,0); height:100%; width:10%; padding:0px" class="jumbotron-btn-right <%--w3-button w3-display-right--%>" onclick="plusDivs(+1)">&#10095;</button>
 
         <h1 class="w3-display-topmiddle">LiveINsport</h1>
         <p class="lead w3-display-middle">
