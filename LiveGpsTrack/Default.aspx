@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="LiveGpsTrack._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<%--    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />--%>
     <div class="jumbotron w3-display-container">
         <a class="mySlides" href="http://localhost:49882/GpsTrack">
             <img border="0" src="Img/1.jpg" style="width: 100%">

@@ -5590,7 +5590,31 @@ a.list-group-item:focus {
         color: #000 !important;
         background-color: rgba(255,255,255,0.2) !important;
     }
-  
+.w3-display-container {
+    position: relative;
+}
+.w3-display-bottomleft {
+    position: absolute;
+    left: 0;
+    bottom: 0
+}
+
+
+.w3-display-topmiddle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,0%);
+    -ms-transform: translate(-50%,0%)
+}
+.w3-display-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%)
+}
+
 .well blockquote {
     border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15);
