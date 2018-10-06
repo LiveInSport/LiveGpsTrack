@@ -18,24 +18,24 @@
     <div id="location" class="marker"><span class="icon-arrow-up"></span></div>
     <script>//uses geolocation for locating and shoving the current location
         // create a style to display our position history (track)
-        var trackStyle = new ol.style.Style(
-            stroke: new ol.style.Stroke(
-                color: 'rgba(0,0,255,1.0)',
-                width: 3,
-                lineCap: 'round'
-            )
-        );
+        //var trackStyle = new ol.style.Style(
+        //    stroke: new ol.style.Stroke(
+        //        color: 'rgba(0,0,255,1.0)',
+        //        width: 3,
+        //        lineCap: 'round'
+        //    )
+        //);
         // use a single feature with a linestring geometry to display our track
-        var trackFeature = new ol.Feature(
-            geometry: new ol.geom.LineString([])
-        );
+        //var trackFeature = new ol.Feature(
+        //    geometry: new ol.geom.LineString([])
+        //);
         // we'll need a vector layer to render it
-        var trackLayer = new ol.layer.Vector({
-            source: new ol.source.Vector({
-                features: [trackFeature]
-            }),
-            style: trackStyle
-        });
+        //var trackLayer = new ol.layer.Vector({
+        //    source: new ol.source.Vector({
+        //        features: [trackFeature]
+        //    }),
+        //    style: trackStyle
+        //});
         var baseLayer = new ol.layer.Tile({
             source: new ol.source.OSM()
         });
@@ -46,44 +46,44 @@
         });
         var map = new ol.Map({
             target: 'map',
-            layers: [baseLayer, trackLayer],
+            layers: [baseLayer/*, trackLayer*/],
             view: view
         });
         // set up the geolocation api to track our position
-        var geolocation = new ol.Geolocation({
+        //var geolocation = new ol.Geolocation({
 
-            tracking: true
-        });
-        // bind the view's projection
-        geolocation.bindTo('projection', view);
-        // when we get a position update, add the coordinate to the track's
-        // geometry and recenter the view
-        geolocation.on('change:position', function () {
-            var coordinate = geolocation.getPosition();
-            var direction = geolocation.getHeading();
-            view.setCenter(coordinate);
-            document.getElementById('latit').innerText = coordinate;
-            document.getElementById('longit').innerText = 'Heading ' + direction + ' Altitude ' + geolocation.getAltitude();
-            document.getElementById('spd').innerText = 'Accuracy ' + geolocation.getAccuracy() + 'm Speed ' + geolocation.getSpeed();
-            trackFeature.getGeometry().appendCoordinate(coordinate);
-        });
-        // put a marker at our current position
-        var data = new SqlCommand("select ")
-        var marker = new ol.Overlay({
-            element: document.getElementById('location'),
-            positioning: 'center-center'
-        });
-        map.addOverlay(marker);
-        marker.bindTo('position', geolocation);
-        // rotate the view to match the device orientation
-        var deviceOrientation = new ol.DeviceOrientation({
-            tracking: true
-        });
-        deviceOrientation.on('change:heading', onChangeHeading);
-        function onChangeHeading(event) {
-            var heading = event.target.getHeading();
-            view.setRotation(-heading);
-        }
+        //    tracking: true
+        //});
+        //// bind the view's projection
+        //geolocation.bindTo('projection', view);
+        //// when we get a position update, add the coordinate to the track's
+        //// geometry and recenter the view
+        //geolocation.on('change:position', function () {
+        //    var coordinate = geolocation.getPosition();
+        //    var direction = geolocation.getHeading();
+        //    view.setCenter(coordinate);
+        //    document.getElementById('latit').innerText = coordinate;
+        //    document.getElementById('longit').innerText = 'Heading ' + direction + ' Altitude ' + geolocation.getAltitude();
+        //    document.getElementById('spd').innerText = 'Accuracy ' + geolocation.getAccuracy() + 'm Speed ' + geolocation.getSpeed();
+        //    trackFeature.getGeometry().appendCoordinate(coordinate);
+        //});
+        //// put a marker at our current position
+        //var data = new SqlCommand("select ")
+        //var marker = new ol.Overlay({
+        //    element: document.getElementById('location'),
+        //    positioning: 'center-center'
+        //});
+        //map.addOverlay(marker);
+        //marker.bindTo('position', geolocation);
+        //// rotate the view to match the device orientation
+        //var deviceOrientation = new ol.DeviceOrientation({
+        //    tracking: true
+        //});
+        //deviceOrientation.on('change:heading', onChangeHeading);
+        //function onChangeHeading(event) {
+        //    var heading = event.target.getHeading();
+        //    view.setRotation(-heading);
+        //}
 
     </script>
 </asp:Content>
