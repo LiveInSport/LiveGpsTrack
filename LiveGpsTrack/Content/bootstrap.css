@@ -324,7 +324,7 @@ select,
 textarea {
   font-family: inherit;
   font-size: 170%;
-color: transpearent;
+  color: transparent;
 
   line-height: inherit;
 }
