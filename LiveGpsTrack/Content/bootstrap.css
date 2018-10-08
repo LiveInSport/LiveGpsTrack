@@ -323,7 +323,9 @@ button,
 select,
 textarea {
   font-family: inherit;
-  font-size: inherit;
+  font-size: 170%;
+color: transpearent;
+
   line-height: inherit;
 }
 
@@ -5587,8 +5589,9 @@ a.list-group-item:focus {
     left: 0% !important;
 }
     .jumbotron-btn-left:hover, .jumbotron-btn-right:hover {
-        color: #000 !important;
-        background-color: rgba(255,255,255,0.2) !important;
+        color: white !important;
+        background-color: rgba(255,255,255,0
+        ) !important;
     }
 .w3-display-container {
     position: relative;
