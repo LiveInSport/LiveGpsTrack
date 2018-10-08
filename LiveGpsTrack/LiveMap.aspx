@@ -16,7 +16,7 @@
     
     <div id="location" class="marker"><span class="icon-arrow-up"></span></div>
     <script>
-                var events = [<%= this.eloc %>];
+<%--                var events = [<%= this.eloc %>];--%>
 
         var baseLayer = new ol.layer.Tile({
             source: new ol.source.OSM()

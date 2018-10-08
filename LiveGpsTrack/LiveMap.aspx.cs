@@ -18,7 +18,7 @@ namespace LiveMap
 
     public partial class LiveMap : System.Web.UI.Page
     {
-        public string[] eloc;
+        public List<string> eloc ;
         public string[] eName;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -42,7 +42,7 @@ namespace LiveMap
                 reader.GetFloat(1);
             }
             conn.Close();
-            eloc = locatio.ToArray();
+            eloc = locatio.ToList();
             eName = Name.ToArray();
         }
 
