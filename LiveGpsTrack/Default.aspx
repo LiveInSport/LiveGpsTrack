@@ -15,7 +15,7 @@
         <button type="button" class="jumbotron-btn-left <%--w3-button w3-display-left--%>" onclick="plusDivs(-1);">&#10094;</button>
         <button type="button" class="jumbotron-btn-right <%--w3-button w3-display-right--%>" onclick="plusDivs(+1)">&#10095;</button>
 
-        <h1 class="w3-display-bottomright" style="color:rgb(255, 255, 255, 0.5)">LiveINsport</h1>
+        <h1 class="w3-display-bottomright" style="color:rgba(255, 255, 255, 0.5)">LiveINsport</h1>
        
     </div>
     <script>
