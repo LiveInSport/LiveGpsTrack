@@ -17,7 +17,6 @@
 
         <h1 class="w3-display-topmiddle" style="color:rgb(255, 255, 255, 0.5)">LiveINsport</h1>
        
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg w3-display-bottomleft">Learn more &raquo;</a></p>
     </div>
     <script>
             var time = true;
