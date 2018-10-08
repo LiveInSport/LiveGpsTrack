@@ -9,7 +9,7 @@
     <script src="/Scripts/ol-debug.js" type="text/javascript"></script>
     <div id="map" class="full-map" style="border-radius: 40px;"></div>
         <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+    <asp:Button ID="Button1" runat="server" Text="Button"/>
     
     <asp:ListBox ID="ListBox1" runat="server">
         <asp:ListItem>zzxz</asp:ListItem>
@@ -49,25 +49,9 @@
             layers: [baseLayer/*, trackLayer*/],
             view: view
         });
-        // set up the geolocation api to track our position
-        //var geolocation = new ol.Geolocation({
 
-        //    tracking: true
-        //});
-        //// bind the view's projection
-        //geolocation.bindTo('projection', view);
-        //// when we get a position update, add the coordinate to the track's
-        //// geometry and recenter the view
-        //geolocation.on('change:position', function () {
-        //    var coordinate = geolocation.getPosition();
-        //    var direction = geolocation.getHeading();
-        //    view.setCenter(coordinate);
-        //    document.getElementById('latit').innerText = coordinate;
-        //    document.getElementById('longit').innerText = 'Heading ' + direction + ' Altitude ' + geolocation.getAltitude();
-        //    document.getElementById('spd').innerText = 'Accuracy ' + geolocation.getAccuracy() + 'm Speed ' + geolocation.getSpeed();
-        //    trackFeature.getGeometry().appendCoordinate(coordinate);
-        //});
         //// put a marker at our current position
+        for(int i =0,  ,)
         //var data = new SqlCommand("select ")
         //var marker = new ol.Overlay({
         //    element: document.getElementById('location'),
