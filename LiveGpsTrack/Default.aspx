@@ -15,9 +15,8 @@
         <button type="button" class="jumbotron-btn-left <%--w3-button w3-display-left--%>" onclick="plusDivs(-1);">&#10094;</button>
         <button type="button" class="jumbotron-btn-right <%--w3-button w3-display-right--%>" onclick="plusDivs(+1)">&#10095;</button>
 
-        <h1 class="w3-display-topmiddle" style="color:white">LiveINsport</h1>
-        <p class="lead w3-display-middle">
-            more SPORT
+        <h1 class="w3-display-topmiddle" style="color:rgb(255, 255, 255, 0.5)">LiveINsport</h1>
+       
         <p><a href="http://www.asp.net" class="btn btn-primary btn-lg w3-display-bottomleft">Learn more &raquo;</a></p>
     </div>
     <script>
