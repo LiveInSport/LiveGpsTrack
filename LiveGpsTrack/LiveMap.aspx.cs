@@ -18,7 +18,8 @@ namespace LiveMap
 
     public partial class LiveMap : System.Web.UI.Page
     {
-
+        public string[] eloc;
+        public string[] eName;
         protected void Page_Load(object sender, EventArgs e)
         {
             Connect("SELECT * FROM events ");
@@ -32,20 +33,17 @@ namespace LiveMap
             command.CommandText = a;// "SELECT * FROM tracks WHERE id=3";
             MySqlDataReader reader = command.ExecuteReader();
             List<string> locatio = new List<string>();
+            List<string> Name = new List<string>();
 
             while (reader.Read())
             {
                 locatio.Add(reader["drivers"].ToString());
-                //Events.Add(new Event((float)reader["lat"], (float)reader["lng"], reader["Name"].ToString()));
-                
-                //Label1.Text = Label1.Text + (float)reader["lat"];
-                //Label1.Text = Label1.Text + reader["location"].ToString();
-                //reader.GetString(1);
+                Name.Add(reader["name"].ToString());
                 reader.GetFloat(1);
             }
             conn.Close();
-            var all = String.Join(", ", locatio.ToArray());
-            Label1.Text = all;
+            eloc = locatio.ToArray();
+            eName = Name.ToArray();
         }
 
     }

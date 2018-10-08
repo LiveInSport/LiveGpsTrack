@@ -500,7 +500,7 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 580px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -4951,6 +4951,7 @@ a.list-group-item.active > .badge,
 .jumbotron h1 {
   line-height: 1;
   color: inherit;
+  margin-top:580px;
 }
 
 .jumbotron p {
@@ -4972,6 +4973,7 @@ a.list-group-item.active > .badge,
   }
   .jumbotron h1 {
     font-size: 63px;
+    margin-top:450px;
   }
 }
 
@@ -5599,6 +5601,11 @@ a.list-group-item:focus {
 .w3-display-bottomleft {
     position: absolute;
     left: 0;
+    bottom: 0
+}
+.w3-display-bottomright {
+    position: absolute;
+    right: 0;
     bottom: 0
 }
 

@@ -234,6 +234,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Img\car.png" />
     <Content Include="insertsql.php" />
     <Content Include="LiveMap.aspx" />
     <Content Include="PrivatePages\GpsTrack.aspx" />
