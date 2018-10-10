@@ -30,7 +30,7 @@
         <div id="map" class="full-map"></div>
 
     </div>
-    <script>                
+    <script>
         var baseLayer = new ol.layer.Tile({
             source: new ol.source.OSM()
         });
