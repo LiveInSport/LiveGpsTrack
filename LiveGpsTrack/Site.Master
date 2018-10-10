@@ -51,7 +51,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
+<%--                        <li><a runat="server" href="~/">Home</a></li>--%>
                         <li><a runat="server" href="~/PrivatePages/GpsTrack">GPS Track</a></li>
                         <li><a runat="server" href="~/LiveMap">Live Map</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
@@ -69,7 +69,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - My LiveInSport Application</p>
 
             </footer>
         </div>

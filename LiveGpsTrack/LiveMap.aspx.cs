@@ -24,7 +24,6 @@ namespace LiveMap
         public List<string> eName = new List<string>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Connect("SELECT * FROM events ");
             BindData();
         }
         public void Connect(string a)

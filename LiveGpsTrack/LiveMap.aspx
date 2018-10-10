@@ -8,9 +8,14 @@
     <script src="/Scripts/ol-debug.js" type="text/javascript"></script>
     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
     <div class="jumbotron w3-display-container">
-        <input id="Button1" class="btn btn-default" type="button" style="position:absolute; right:10px; margin-left: 10px;" value="Hide" onclick="ShowMap()" />
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" ShowHeader="false">
+        <input id="Button1" class="btn btn-default" type="button" style="position: absolute; right: 10px; margin-left: 10px;" value="Hide map" onclick="ShowMap()" />
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" ShowHeader="False" AutoGenerateColumns="False" AllowSorting="True" AllowPaging="True" >
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <Columns>
+                <asp:HyperLinkField DataTextField="name" DataNavigateUrlFormatString="~/Event.aspx?id={0}" DataNavigateUrlFields="id" NavigateUrl="~/Event.aspx" ItemStyle-CssClass="h1" />
+                <asp:HyperLinkField DataTextField="lat" DataNavigateUrlFormatString="~/Event.aspx?id={0}" DataNavigateUrlFields="id" NavigateUrl="~/Event.aspx" />
+                <asp:HyperLinkField DataTextField="date" DataTextFormatString="{0:d}" DataNavigateUrlFormatString="~/Event.aspx?id={0}" DataNavigateUrlFields="id" NavigateUrl="~/Event.aspx" />
+            </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -41,12 +46,12 @@
         });
 
         function ShowMap() {
-            if (document.getElementById("Button1").value == "Hide") {// if map hidden then show
+            if (document.getElementById("Button1").value == "Hide map") {// if map hidden then show
                 document.getElementById("Button1").value = "Show map";
                 document.getElementById("map").style = "display: none;";
             } else {
                 document.getElementById("map").style = "display: block;";
-                document.getElementById("Button1").value = "Hide";
+                document.getElementById("Button1").value = "Hide map";
             }
         }//show map and button
     </script>
