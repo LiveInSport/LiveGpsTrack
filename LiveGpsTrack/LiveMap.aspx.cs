@@ -18,8 +18,8 @@ namespace LiveMap
 
     public partial class LiveMap : System.Web.UI.Page
     {
-        public List<string> eloc ;
-        public string[] eName;
+        public List<string> eloc = new List<string>();
+        public List<string> eName = new List<string>();
         protected void Page_Load(object sender, EventArgs e)
         {
             Connect("SELECT * FROM events ");
@@ -38,12 +38,13 @@ namespace LiveMap
             while (reader.Read())
             {
                 locatio.Add(reader["drivers"].ToString());
+         
                 Name.Add(reader["name"].ToString());
                 reader.GetFloat(1);
             }
             conn.Close();
             eloc = locatio.ToList();
-            eName = Name.ToArray();
+            eName = Name.ToList();
         }
 
     }

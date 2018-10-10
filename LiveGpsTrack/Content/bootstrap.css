@@ -324,8 +324,6 @@ select,
 textarea {
   font-family: inherit;
   font-size: 170%;
-  color: transparent;
-
   line-height: inherit;
 }
 
@@ -5574,6 +5572,7 @@ a.list-group-item:focus {
     outline: -webkit-focus-ring-color auto 0px !important;
 }
 .jumbotron-btn-right, .jumbotron-btn-left {
+    color: transparent;
     position: absolute;
     top: 50% !important;
     border: 0px !important;

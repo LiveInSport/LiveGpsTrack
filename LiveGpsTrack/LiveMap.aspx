@@ -6,17 +6,17 @@
     <link rel="stylesheet" href="/Content/oltest.css" type="text/css">
     <link rel="stylesheet" href="/Content/font-awesome.css" type="text/css">
     <script src="/Scripts/ol-debug.js" type="text/javascript"></script>
-    <div id="map" class="full-map" style="border-radius: 40px;"></div>
     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
     <asp:Button ID="Button1" runat="server" Text="Button" />
 
     <asp:ListBox ID="ListBox1" runat="server">
         <asp:ListItem>zzxz</asp:ListItem>
     </asp:ListBox>
+    <div id="map" class="full-map" style="border-radius: 40px;"></div>
     
     <div id="location" class="marker"><span class="icon-arrow-up"></span></div>
     <script>
-<%--                var events = [<%= this.eloc %>];--%>
+<%--                var events = <%=this.eloc %>;--%>
 
         var baseLayer = new ol.layer.Tile({
             source: new ol.source.OSM()
