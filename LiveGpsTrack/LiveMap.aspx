@@ -7,32 +7,48 @@
     <link rel="stylesheet" href="/Content/font-awesome.css" type="text/css">
     <script src="/Scripts/ol-debug.js" type="text/javascript"></script>
     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-    <asp:Button ID="Button1" runat="server" Text="Button" />
+    <div class="jumbotron w3-display-container">
+        <input id="Button1" class="btn btn-default" type="button" style="position:absolute; right:10px; margin-left: 10px;" value="Hide" onclick="ShowMap()" />
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" ShowHeader="false">
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <EditRowStyle BackColor="#999999" />
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+        </asp:GridView>
+        <div id="map" class="full-map"></div>
 
-    <asp:ListBox ID="ListBox1" runat="server">
-        <asp:ListItem>zzxz</asp:ListItem>
-    </asp:ListBox>
-    <div id="map" class="full-map" style="border-radius: 40px;"></div>
-    
-    <div id="location" class="marker"><span class="icon-arrow-up"></span></div>
-    <script>
-<%--                var events = <%=this.eloc %>;--%>
-
+    </div>
+    <script>                
         var baseLayer = new ol.layer.Tile({
             source: new ol.source.OSM()
         });
         var london = ol.proj.transform([-0.12755, 51.507222], 'EPSG:4326', 'EPSG:3857');
         var view = new ol.View({
             center: london,
-            zoom: 19
+            zoom: 3
         });
         map = new ol.Map({
             target: 'map',
-            layers: [baseLayer/*, trackLayer*/],
+            layers: [baseLayer],
             view: view
         });
-        //var vctLayer = new ol.layer.Vector("Overlay");
 
+        function ShowMap() {
+            if (document.getElementById("Button1").value == "Hide") {// if map hidden then show
+                document.getElementById("Button1").value = "Show map";
+                document.getElementById("map").style = "display: none;";
+            } else {
+                document.getElementById("map").style = "display: block;";
+                document.getElementById("Button1").value = "Hide";
+            }
+        }//show map and button
     </script>
 </asp:Content>
 
